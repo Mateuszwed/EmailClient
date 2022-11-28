@@ -4,6 +4,8 @@ import com.example.emailclientapp.controller.BaseController;
 import com.example.emailclientapp.controller.LoginWindowController;
 import com.example.emailclientapp.controller.MainWindowController;
 import com.example.emailclientapp.controller.OptionsWindowController;
+import com.example.emailclientapp.view.ColorTheme;
+import com.example.emailclientapp.view.FontSize;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -17,6 +19,25 @@ public class ViewFactory {
 
     public ViewFactory(EmailManager emailManager) {
         this.emailManager = emailManager;
+    }
+
+    private ColorTheme colorTheme = ColorTheme.DEFAULT;
+    private FontSize fontSize = FontSize.MEDIUM;
+
+    public ColorTheme getColorTheme() {
+        return colorTheme;
+    }
+
+    public void setColorTheme(ColorTheme colorTheme) {
+        this.colorTheme = colorTheme;
+    }
+
+    public FontSize getFontSize() {
+        return fontSize;
+    }
+
+    public void setFontSize(FontSize fontSize) {
+        this.fontSize = fontSize;
     }
 
     public void showLoginWindow() {
