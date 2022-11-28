@@ -1,6 +1,7 @@
 module com.example.emailclientapp {
     requires javafx.controls;
     requires javafx.fxml;
+    requires javafx.web;
 
 
     opens com.example.emailclientapp to javafx.fxml;
