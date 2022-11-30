@@ -24,7 +24,7 @@ public class ViewFactory {
         activesStages = new ArrayList<Stage>();
     }
 
-    private ColorTheme colorTheme = ColorTheme.DEFAULT;
+    private ColorTheme colorTheme = ColorTheme.DARK;
     private FontSize fontSize = FontSize.MEDIUM;
 
     public ColorTheme getColorTheme() {
