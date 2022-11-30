@@ -3,6 +3,7 @@ module com.example.emailclientapp {
     requires javafx.controls;
     requires javafx.graphics;
     requires javafx.web;
+    requires java.mail;
 
     opens com.example.emailclientapp to javafx.fxml;
     exports com.example.emailclientapp;

@@ -16,8 +16,8 @@ public class Laucher extends Application {
     public void start(Stage stage) {
 
         ViewFactory viewFactory = new ViewFactory(new EmailManager());
-        viewFactory.showOptionWindow();
-        viewFactory.updateStyles();
+        viewFactory.showLoginWindow();
+
 
     }
 }
