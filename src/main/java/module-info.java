@@ -9,6 +9,7 @@ module com.example.emailclientapp {
     exports com.example.emailclientapp;
     exports com.example.emailclientapp.controller;
     opens com.example.emailclientapp.controller to javafx.fxml;
+    opens com.example.emailclientapp.model;
     //exports com.example.emailclientapp.view;
     //opens com.example.emailclientapp.view to javafx.fxml;
 }
