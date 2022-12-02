@@ -57,11 +57,12 @@ public class MessageRendererService extends Service {
             stringBuffer.append(message.getContent().toString());
         } else if(isMultipartType(contentType)){
             Multipart multipart = (Multipart) message.getContent();
-            for (int i = multipart.getCount() - 1; i>=0; i--){
+            for (int i = multipart.getCount() - 1; i >=0 ; i--) {
                 BodyPart bodyPart = multipart.getBodyPart(i);
                 String bodyPartContentType = bodyPart.getContentType();
-                if(isSimpleType(bodyPartContentType)){
+                if( isSimpleType(bodyPartContentType) ) {
                     stringBuffer.append(bodyPart.getContent().toString());
+                    return;
                 }
             }
         }

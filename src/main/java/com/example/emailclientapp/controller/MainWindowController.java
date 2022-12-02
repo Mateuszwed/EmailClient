@@ -1,7 +1,7 @@
 package com.example.emailclientapp.controller;
 
 import com.example.emailclientapp.EmailManager;
-import com.example.emailclientapp.ViewFactory;
+import com.example.emailclientapp.view.ViewFactory;
 import com.example.emailclientapp.controller.services.MessageRendererService;
 import com.example.emailclientapp.model.EmailMessage;
 import com.example.emailclientapp.model.EmailTreeItem;

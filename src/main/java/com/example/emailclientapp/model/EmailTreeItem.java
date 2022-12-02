@@ -49,7 +49,7 @@ public class EmailTreeItem<String> extends TreeItem<String> {
         if(!messageIsRead){
             incrementMessagesCount();
         }
-        return  emailMessage;
+        return emailMessage;
     }
 
     public void incrementMessagesCount(){

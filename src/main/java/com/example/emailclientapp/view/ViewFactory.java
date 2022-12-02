@@ -1,5 +1,7 @@
-package com.example.emailclientapp;
+package com.example.emailclientapp.view;
 
+import com.example.emailclientapp.EmailManager;
+import com.example.emailclientapp.Launcher;
 import com.example.emailclientapp.controller.BaseController;
 import com.example.emailclientapp.controller.LoginWindowController;
 import com.example.emailclientapp.controller.MainWindowController;
@@ -12,6 +14,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.net.URL;
 import java.util.ArrayList;
 
 public class ViewFactory {
@@ -74,7 +77,7 @@ public class ViewFactory {
 
     private void initializeStage(BaseController baseController){
 
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(baseController.getFxmlName()));
+        FXMLLoader fxmlLoader = new FXMLLoader(Launcher.class.getResource(baseController.getFxmlName()));
         fxmlLoader.setController(baseController);
         Parent parent;
         try {
