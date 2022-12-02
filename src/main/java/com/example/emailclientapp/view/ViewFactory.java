@@ -71,6 +71,12 @@ public class ViewFactory {
         initializeStage(controller);
     }
 
+    public void showEmailDetailsWindow(){
+
+        BaseController controller = new EmailDetailsController(emailManager, this, "EmailDetailsWindow.fxml");
+        initializeStage(controller);
+    }
+
     private void initializeStage(BaseController baseController){
 
         FXMLLoader fxmlLoader = new FXMLLoader(Launcher.class.getResource(baseController.getFxmlName()));
