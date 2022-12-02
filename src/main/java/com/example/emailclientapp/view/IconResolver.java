@@ -27,6 +27,8 @@ public class IconResolver {
             e.printStackTrace();
             return null;
         }
+        imageView.setFitWidth(16);
+        imageView.setFitHeight(16);
         return imageView;
     }
 }
