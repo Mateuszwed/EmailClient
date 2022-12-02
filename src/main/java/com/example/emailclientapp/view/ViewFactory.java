@@ -3,15 +3,12 @@ package com.example.emailclientapp.view;
 import com.example.emailclientapp.EmailManager;
 import com.example.emailclientapp.Launcher;
 import com.example.emailclientapp.controller.*;
-import com.example.emailclientapp.view.ColorTheme;
-import com.example.emailclientapp.view.FontSize;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.net.URL;
 import java.util.ArrayList;
 
 public class ViewFactory {
@@ -74,7 +71,7 @@ public class ViewFactory {
     public void showComposeMessageWindow(){
         System.out.println("show option window called");
 
-        BaseController controller = new ComposeMessageContorller(emailManager, this, "ComposeMessageWindow.fxml");
+        BaseController controller = new ComposeMessageController(emailManager, this, "ComposeMessageWindow.fxml");
         initializeStage(controller);
     }
 
