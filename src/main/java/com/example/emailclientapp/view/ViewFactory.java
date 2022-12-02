@@ -2,10 +2,7 @@ package com.example.emailclientapp.view;
 
 import com.example.emailclientapp.EmailManager;
 import com.example.emailclientapp.Launcher;
-import com.example.emailclientapp.controller.BaseController;
-import com.example.emailclientapp.controller.LoginWindowController;
-import com.example.emailclientapp.controller.MainWindowController;
-import com.example.emailclientapp.controller.OptionsWindowController;
+import com.example.emailclientapp.controller.*;
 import com.example.emailclientapp.view.ColorTheme;
 import com.example.emailclientapp.view.FontSize;
 import javafx.fxml.FXMLLoader;
@@ -74,6 +71,12 @@ public class ViewFactory {
         initializeStage(controller);
     }
 
+    public void showComposeMessageWindow(){
+        System.out.println("show option window called");
+
+        BaseController controller = new ComposeMessageContorller(emailManager, this, "ComposeMessageWindow.fxml");
+        initializeStage(controller);
+    }
 
     private void initializeStage(BaseController baseController){
 
