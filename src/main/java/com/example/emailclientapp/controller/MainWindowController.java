@@ -1,11 +1,14 @@
 package com.example.emailclientapp.controller;
 
+import com.example.emailclientapp.EmailManager;
+import com.example.emailclientapp.ViewFactory;
 import javafx.fxml.FXML;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TreeView;
 import javafx.scene.web.WebView;
+import javafx.stage.Stage;
 
-public class MainWindowController {
+public class MainWindowController extends BaseController {
 
     @FXML
     private TreeView<?> emailsTreeView;
@@ -16,9 +19,19 @@ public class MainWindowController {
     @FXML
     private WebView emailWebView;
 
-    @FXML
-    void optionsAction() {
-
+    public MainWindowController(EmailManager emailManager, ViewFactory viewFactory, String fxmlName) {
+        super(emailManager, viewFactory, fxmlName);
     }
 
+    @FXML
+    void optionsAction() {
+        System.out.println("optionButton");
+        viewFactory.showOptionWindow();
+    }
+
+    @FXML
+    void addAccountAction() {
+        viewFactory.showLoginWindow();
+
+    }
 }
