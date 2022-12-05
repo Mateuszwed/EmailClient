@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.web.WebView?>
+
+
+<AnchorPane prefHeight="650.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="14.0" layoutY="37.0" text="Subject:" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="499.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="15.0" layoutY="62.0" text="Sender:" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="499.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="attachmentLabel" layoutX="14.0" layoutY="88.0" text="Attachments:" AnchorPane.bottomAnchor="541.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="499.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <WebView fx:id="webView" layoutX="14.0" layoutY="134.0" prefHeight="508.0" prefWidth="572.0" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="134.0" />
+      <Label fx:id="subjectLabel" layoutX="101.0" layoutY="37.0" prefHeight="21.0" prefWidth="482.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="senderLabel" layoutX="101.0" layoutY="62.0" prefHeight="21.0" prefWidth="482.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <HBox fx:id="hBoxDownloads" layoutX="118.0" layoutY="84.0" prefHeight="29.0" prefWidth="449.0" />
+   </children>
+</AnchorPane>
