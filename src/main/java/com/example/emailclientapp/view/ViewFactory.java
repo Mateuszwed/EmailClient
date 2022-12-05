@@ -1,5 +1,7 @@
-package com.example.emailclientapp;
+package com.example.emailclientapp.view;
 
+import com.example.emailclientapp.EmailManager;
+import com.example.emailclientapp.Launcher;
 import com.example.emailclientapp.controller.BaseController;
 import com.example.emailclientapp.controller.LoginWindowController;
 import com.example.emailclientapp.controller.MainWindowController;
@@ -12,16 +14,22 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.net.URL;
 import java.util.ArrayList;
 
 public class ViewFactory {
 
     private EmailManager emailManager;
     private ArrayList<Stage> activesStages;
+    private  boolean mainViewInitialized = false;
 
     public ViewFactory(EmailManager emailManager) {
         this.emailManager = emailManager;
         activesStages = new ArrayList<Stage>();
+    }
+
+    public boolean isMainViewInitialized() {
+        return mainViewInitialized;
     }
 
     private ColorTheme colorTheme = ColorTheme.DARK;
@@ -55,6 +63,7 @@ public class ViewFactory {
 
         BaseController controller = new MainWindowController(emailManager, this, "MainWindow.fxml");
         initializeStage(controller);
+        mainViewInitialized = true;
     }
 
 
@@ -68,7 +77,7 @@ public class ViewFactory {
 
     private void initializeStage(BaseController baseController){
 
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(baseController.getFxmlName()));
+        FXMLLoader fxmlLoader = new FXMLLoader(Launcher.class.getResource(baseController.getFxmlName()));
         fxmlLoader.setController(baseController);
         Parent parent;
         try {
